@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Izzy Education</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-white text-black">
+
+  <!-- Header -->
+  <header class="fixed w-full bg-white/80 backdrop-blur shadow-sm z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between 
+items-center">
+      <div class="text-xl font-bold">Izzy Education</div>
+      <nav class="space-x-6 hidden md:block">
+        <a href="#home" class="hover:text-blue-600 lang" data-en="Home" 
+data-zh="首页">Home</a>
+        <a href="#courses" class="hover:text-blue-600 lang" 
+data-en="Courses" data-zh="课程">Courses</a>
+        <a href="#ai" class="hover:text-blue-600 lang" data-en="AI Tutor" 
+data-zh="AI助教">AI Tutor</a>
+        <a href="#contact" class="hover:text-blue-600 lang" 
+data-en="Contact" data-zh="联系我们">Contact</a>
+      </nav>
+      <!-- Language toggle -->
+      <button onclick="toggleLanguage()" class="ml-4 text-sm border px-3 
+py-1 rounded hover:bg-gray-100" id="lang-btn">中文</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen bg-cover bg-center flex items-center 
+justify-center" style="background-image: 
+url('https://source.unsplash.com/1600x900/?education');">
+    <div class="bg-black bg-opacity-50 absolute inset-0"></div>
+    <div class="relative z-10 text-white text-center px-4 max-w-2xl">
+      <h1 class="text-5xl font-bold lang" data-en="Learning powered by AI" 
+data-zh="AI赋能学习">Learning powered by AI</h1>
+      <p class="text-xl mt-4 lang" data-en="Izzy Education helps students 
+succeed with smart learning tools." data-zh="Izzy Education 
+通过智能学习工具帮助学生取得成功。">Izzy Education helps students succeed 
+with smart learning tools.</p>
+    </div>
+  </section>
+
+  <!-- Script for language toggle -->
+  <script>
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'zh' : 'en';
+      document.querySelectorAll('.lang').forEach(el => {
+        el.textContent = el.getAttribute(`data-${currentLang}`);
+      });
+      document.getElementById('lang-btn').textContent = currentLang === 
+'en' ? '中文' : 'EN';
+    }
+  </script>
+
+</body>
+</html>

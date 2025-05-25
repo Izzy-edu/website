@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>Izzy Education</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black font-sans">
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 
+shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between 
+items-center">
+      <div class="text-xl font-semibold">Izzy Education</div>
+      <nav class="space-x-8 hidden md:block">
+        <a href="#home" class="hover:text-blue-600">首页</a>
+        <a href="#courses" class="hover:text-blue-600">课程</a>
+        <a href="#ai" class="hover:text-blue-600">AI助教</a>
+        <a href="#contact" class="hover:text-blue-600">联系我们</a>
+        <a href="/" class="hover:text-blue-600 font-semibold">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="h-screen bg-cover bg-center flex items-center 
+justify-center" style="background-image: 
+url('https://source.unsplash.com/1600x900/?kids,learning,ai');">
+    <div class="bg-black bg-opacity-40 absolute inset-0"></div>
+    <div class="z-10 text-center text-white px-4 max-w-2xl">
+      <h1 class="text-5xl font-semibold mb-6">未来的教育，从AI开始</h1>
+      <p class="text-xl">Izzy Education 
+将AI与真人教学相结合，打造个性化的K-12学习体验。</p>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" class="max-w-6xl mx-auto py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">热门课程</h2>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">AI编程启蒙</h3>
+        <p class="text-gray-600">适合1-3年级，图形化编程 + 游戏互动。</p>
+      </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">数学思维训练</h3>
+        <p 
+class="text-gray-600">强化逻辑、算术、推理能力，辅以AI错题分析。</p>
+      </div>
+      <div class="p-6 border rounded-xl hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">AP课程辅导</h3>
+        <p class="text-gray-600">AP Calculus, CS, 
+Physics等，名师指导，模拟测试。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI 系统 -->
+  <section id="ai" class="bg-gray-100 py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">AI助教系统</h2>
+    <p class="max-w-xl mx-auto 
+text-gray-700">我们开发的AI学习助手能够自动分析学生学习习惯，智能推送复习内容，提高效率，减轻家长负担。</p>
+    <div class="mt-10">
+      <img 
+src="https://source.unsplash.com/800x400/?ai,education,interface" alt="AI 
+教学系统示意图" class="rounded-xl mx-auto shadow-md">
+    </div>
+  </section>
+
+  <!-- 联系我们 -->
+  <section id="contact" class="py-20 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-6">联系我们</h2>
+    <p class="text-gray-600 mb-4">想了解更多或合作？欢迎发送邮件至 <a 
+href="mailto:hello@izzyedu.com" class="text-blue-600 
+underline">hello@izzyedu.com</a></p>
+    <p class="text-gray-600">地址：Newport Beach, California</p>
+  </section>
+
+  <footer class="py-6 text-center text-sm text-gray-500 border-t mt-10">
+    &copy; 2025 Izzy Education LLC. All rights reserved.
+  </footer>
+
+</body>
+</html>

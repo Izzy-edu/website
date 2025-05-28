@@ -5,51 +5,83 @@
   <title>Izzy Education</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+  </style>
+  <!-- 自定义颜色 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            darkbg: '#111827',
+            darkgray: '#1f2937'
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body class="bg-white text-black font-sans">
 
   <!-- Header -->
-  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-semibold">Izzy Education</div>
-      <nav class="space-x-8 hidden md:block">
-        <a href="#home" class="hover:text-blue-600">Home</a>
-        <a href="#courses" class="hover:text-blue-600">Courses</a>
-        <a href="#ai" class="hover:text-blue-600">AI Assistant</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-        <a href="/register/" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Register</a>
-        <a href="/zh/" class="hover:text-blue-600 font-semibold">中文</a>
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+      
+      <!-- LOGO -->
+      <a href="/" class="flex items-center space-x-2">
+        <img src="/images/logo.png" class="h-8" alt="Izzy Logo" />
+        <span class="text-base font-medium text-[#1d1d1f] tracking-tight">Izzy Education</span>
+      </a>
+  
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-[#1d1d1f]">
+        <a href="#home" class="hover:text-black transition">Home</a>
+        <a href="#courses" class="hover:text-black transition">Courses</a>
+        <a href="#ai" class="hover:text-black transition">AI Assistant</a>
+        <a href="#contact" class="hover:text-black transition">Contact</a>
+        <a href="/register/" class="px-4 py-1 border border-gray-300 rounded-full hover:border-black transition">Register</a>
+        <a href="/zh/" class="hover:text-black">中文</a>
       </nav>
+  
+      <!-- Hamburger -->
+      <button class="md:hidden text-gray-600" id="mobile-menu-toggle">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?kids,learning,ai');">
-    <div class="bg-black bg-opacity-40 absolute inset-0"></div>
-    <div class="z-10 text-center text-white px-4 max-w-2xl">
-      <h1 class="text-5xl font-semibold mb-6">The Future of Learning Starts with AI</h1>
-      <p class="text-xl">Izzy Education blends AI with real teachers to deliver personalized learning experiences for K-12 students.</p>
-      <a href="/register/" class="mt-6 inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition">
-        Register Now
-      </a>
-    </div>
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-white text-center px-6">
+    <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-[#1d1d1f] max-w-2xl leading-snug">
+      The Future of Learning Starts with AI
+    </h1>
+    <p class="mt-4 text-lg text-[#6e6e73] max-w-xl">
+      Izzy Education blends AI with real teachers to deliver personalized learning experiences for K–12 students.
+    </p>
+    <a href="/register/" class="mt-8 inline-block border border-gray-400 text-[#1d1d1f] px-6 py-2 rounded-full text-sm font-medium hover:border-black hover:text-black transition">
+      Register Now
+    </a>
   </section>
 
   <!-- Courses -->
   <section id="courses" class="max-w-6xl mx-auto py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-8">Popular Courses</h2>
+    <h2 class="text-4xl font-bold mb-12 text-[#2563EB]">Popular Courses</h2>
     <div class="grid md:grid-cols-3 gap-10">
-      <div class="p-6 border rounded-xl hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Intro to AI Coding</h3>
-        <p class="text-gray-600">For grades 1–3. Block-based coding with interactive games.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-3">Intro to AI Coding</h3>
+        <p class="text-gray-700">For grades 1–3. Block-based coding with interactive games.</p>
       </div>
-      <div class="p-6 border rounded-xl hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">Math Thinking</h3>
-        <p class="text-gray-600">Boost logic and reasoning skills, powered by AI error analysis.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-3">Math Thinking</h3>
+        <p class="text-gray-700">Boost logic and reasoning skills, powered by AI error analysis.</p>
       </div>
-      <div class="p-6 border rounded-xl hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-2">AP Tutoring</h3>
-        <p class="text-gray-600">AP Calculus, CS, Physics and more. Real teachers. Real practice.</p>
+      <div class="p-8 bg-white rounded-2xl shadow-md hover:shadow-xl transform hover:scale-[1.05] transition duration-300 cursor-pointer">
+        <h3 class="text-2xl font-semibold mb-3">AP Tutoring</h3>
+        <p class="text-gray-700">AP Calculus, CS, Physics and more. Real teachers. Real practice.</p>
       </div>
     </div>
   </section>
@@ -66,7 +98,7 @@
   <!-- Contact -->
   <section id="contact" class="py-20 px-6 text-center">
     <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
-    <p class="text-gray-600 mb-4">Interested in learning more or partnering with us? Email us at <a href="mailto:hello@izzyedu.com" class="text-blue-600 underline">hello@izzyedu.com</a></p>
+    <p class="text-gray-600 mb-4">Interested in learning more or partnering with us? Email us at <a href="mailto:izzyeduinfo@gmail.com" class="text-blue-600 underline">izzyeduinfo@gmail.com</a></p>
     <p class="text-gray-600">Location: Newport Beach, California</p>
   </section>
 

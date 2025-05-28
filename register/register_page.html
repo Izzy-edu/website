@@ -30,6 +30,9 @@ pt-24 px-6">
       <h2 class="text-2xl font-bold mb-6 text-center">Register for an 
 Account</h2>
       <form class="space-y-5">
+        <button type="button" id="google-login" class="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded">
+          Sign in with Google
+        </button>
         <div>
           <label class="block mb-1 font-medium">First Name</label>
           <input type="text" class="w-full border rounded px-4 py-2" 
@@ -58,6 +61,38 @@ text-white font-semibold py-2 rounded">
       </form>
     </div>
   </section>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+        <script>
+          const firebaseConfig = {
+            apiKey: "AIzaSyC9-EmTcF_7SlXNw4ZfwpEIto4ZHhcTtGU",
+            authDomain: "izzy-1427b.firebaseapp.com",
+            projectId: "izzy-1427b",
+            storageBucket: "izzy-1427b.firebasestorage.app",
+            messagingSenderId: "286514773156",
+            appId: "1:286514773156:web:6780c12b0485d4f6e37a31",
+            measurementId: "G-MS1JYPVDD9"
+          };
+          firebase.initializeApp(firebaseConfig);
+        </script>
+
+  <script>
+    document.getElementById("google-login").addEventListener("click", () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+          const user = result.user;
+          alert("Welcome, " + user.displayName);
+          // 保存信息、跳转等
+        })
+        .catch((error) => {
+          console.error(error);
+          alert("Login failed.");
+        });
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 py-6 border-t mt-10">

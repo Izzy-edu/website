@@ -8,20 +8,6 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
   </style>
-  <!-- 自定义颜色 -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: '#D4AF37',
-            darkbg: '#111827',
-            darkgray: '#1f2937'
-          }
-        }
-      }
-    }
-  </script>
 </head>
 <body class="bg-white text-black font-sans">
 
@@ -57,15 +43,37 @@
   <!-- Hero -->
   <section id="home" class="min-h-screen flex flex-col justify-center items-center bg-white text-center px-6">
     <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight text-[#1d1d1f] max-w-2xl leading-snug">
-      The Future of Learning Starts with AI
+      Your Brain Isn’t Standard. Why Is Your Education?
     </h1>
     <p class="mt-4 text-lg text-[#6e6e73] max-w-xl">
-      Izzy Education blends AI with real teachers to deliver personalized learning experiences for K–12 students.
+      We analyze how YOU learn, then build your perfect AP path—strengths first, struggles smarter.
     </p>
     <a href="/register/" class="mt-8 inline-block border border-gray-400 text-[#1d1d1f] px-6 py-2 rounded-full text-sm font-medium hover:border-black hover:text-black transition">
       Register Now
     </a>
   </section>
+
+  <!-- Testing Section -->
+<section id="testing" class="relative min-h-[700px] py-20 px-6 text-center">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img src="./images/dark.png" alt="Test Background" class="w-full h-full object-cover opacity-100" />
+  </div>
+
+  <!-- Foreground Image (Decorative Layer Between BG and Text) -->
+  <div class="absolute bottom-0 left-0 w-full z-10">
+    <img src="./images/name.png" alt="Mid Layer" class="w-full h-auto object-cover opacity-100" />
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 mt-60 text-center max-w-xl mx-auto space-y-6">
+    <h2 class="text-3xl font-bold mb-6 text-[#1d1d1f] bg-white/80 px-4 py-2 rounded-xl drop-shadow-md inline-block">Try a Free Learning Test</h2>
+    <p class="text-gray-800 bg-white/70 px-4 py-3 rounded-lg text-base leading-relaxed drop-shadow-sm">Discover Your Academic House – Unlock Your Ideal AP Strategy</p>
+    <a href="/house/" class="inline-block bg-[#1d1d1f] text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-black transition">
+      Start the Test
+    </a>
+  </div>
+</section>
 
   <!-- Courses -->
   <section id="courses" class="max-w-6xl mx-auto py-20 px-6 text-center">
@@ -85,6 +93,16 @@
       </div>
     </div>
   </section>
+
+
+<!-- Coming Soon Section -->
+<section id="coming-soon" class="bg-gray-100 py-20 px-6 text-center">
+  <h2 class="text-3xl font-bold mb-4 text-[#1d1d1f]">Coming Soon</h2>
+  <p class="max-w-xl mx-auto text-gray-700">We're building something amazing: an all-in-one platform with real teachers + AI tutors. Stay tuned!</p>
+  <div class="mt-8">
+    <img src="https://source.unsplash.com/800x400/?education,future,technology" alt="Coming Soon Preview" class="rounded-xl mx-auto shadow-md" />
+  </div>
+</section>
 
   <!-- AI System -->
   <section id="ai" class="bg-gray-100 py-20 px-6 text-center">
